@@ -1,0 +1,21 @@
+<!-- #region 
+<p>Welcome to testComp.component.html</p>
+
+
+<div  [@textState]="textState" >
+  <p style="margin-bottom: 60px"> The para of testComp</p>
+</div>
+<div class="testComp">
+  <button [@buttonState="buttonState"] (click)="toggleButtonState(); toggleTextState()" >ClickMe</button>
+</div>  
+-->
+
+<!-- for the void Aniamtion-->
+<div class="testComp">
+
+    <button  (click)="showTestDev= !showTestDev">Show and Hide</button>
+    <div *ngIf="showTestDiv" [@slideIn]>
+         
+            <p>test dev</p>
+    </div>  
+</div>

@@ -1,0 +1,63 @@
+<div class="container">
+
+    <h1>Food Item Form </h1>
+    {{diagnostic}}
+     <form  (ngSubmit)="onSubmit()" #foodForm="ngForm" >
+          <div class="form-group">
+              <label for="fd_name">Name</label>
+              <input #foodName="ngModel" [(ngModel)]="model.name" name="fd_name" type="text" class="form-control" id="fd_name" required />
+          </div>
+
+          <!-- exaxmple for throwing error after validation -->
+          <div [hidden]="foodName.valid || foodName.pristine" class="alert alert-danger" >
+              A name for the food is required
+          </div>    
+          <!-- exaxmple for template reference variable
+              <button (click)= "demoName = foodName.value" >Set Food Name: {{demoName}}</button> 
+            
+          <p>Classes for food name {{foodName.className}}</p>
+
+            -->
+          <div class="form-group">
+              <label for="fd_desc">Description</label>
+              <input ref-foodDescription   [(ngModel)]="model.description" name="fd_desc" type="text" class="form-control" id="fd_desc" />
+          </div>
+          <!-- exaxmple for template reference variable
+              <button (click)="demoDescription=foodDescription.value" >Set Food Description {{demoDescription}}</button>
+          -->     
+         <div class="form-group">
+              <label for="fd_group">Group</label>
+              <select [(ngModel)]="model.group" name="fd_group" class="form-control" id="fd_group">Group
+                   <option *ngFor="let group of groups" [value]="group">{{group}}</option>
+              </select>
+          </div>
+          <div class="form-group">
+              <label for="fd_serving">Serving Size</label>
+              <input [(ngModel)]="model.servingSize" name="fd_serving" type="text" class="form-control" id="fd_serving" />
+          </div>
+          <div class="form-group">
+              <label for="fd_unit">Units</label>
+              <input [(ngModel)]="model.unit" name="fd_unit" type="text" class="form-control" id="fd_unit" />
+          </div>
+          <div class="form-group">
+                <label for="fd_cal">Calories</label>
+                <input [(ngModel)]="model.calories" name="fd_cal" type="text" class="form-control" id="fd_cal" />
+         </div>
+          <div class="form-group">
+              <label for="fd_protein">Protein</label>
+              <input [(ngModel)]="model.protein" name="fd_protein" type="text" class="form-control" id="fd_protein" />
+          </div>
+          <div class="form-group">
+              <label for="fd_carbs">Carbohydrates</label>
+              <input [(ngModel)]="model.carbs" name="fd_carbs" type="text" class="form-control" id="fd_carbs" />
+          </div>
+          <div class="form-group">
+              <label for="fd_fat">Fat</label>
+              <input [(ngModel)]="model.fat" name="fd_fat" type="text" class="form-control" id="fd_fat" />
+          </div>
+
+          <button [disabled]="!foodForm.form.valid" type="submit" class="btn btn-default">Submit</button>
+
+          <button (click)=" foodForm.reset(); newFood()" type="button" class="btn btn-default">Reset</button>
+     </form>
+</div>

@@ -1,0 +1,36 @@
+<div [class.liked]="isLike"> 
+    <h1>
+        Welcome to Food Item {{foodItem.name}}
+    </h1>
+    
+    <!-- #below is style binding example which working current-->
+    <p [style.font-weight]="isLike ? 'bold' : 'normal'" [innerHtml] = "foodItem.name" ></p>
+    <!-- #below is event binfing -->
+    <button (click)="onLikeButtonPressed($event)">Like</button>
+ <!-- # TWO way binding -->
+    <input [(ngModel)]= "foodItem.name"/>
+<!--Example of ngClass and ngIf-->
+    <p *ngIf="showdescription" [ngClass]="setFoodDescriptionStyleClasses()">
+        Description: {{foodItem.description}}
+    </p>
+<!--Example of ngStyle-->
+
+    <p [ngStyle]="setFoodDescriptionControlObject()"  [innerHtml] = "foodItem.description">  
+    </p>
+    <button (click)= "showdescription=!showdescription">Show/Hide Description</button>
+<div class="nutritionalFactsContainer" style="background-color: aqua">  
+    <div>
+      <p>Display Nutritional Facts about {{foodItem.name}}(s) with size{{foodItem.facts.servingSize}} </p>
+       <button (click) ="nutritionalFacts = 'carbs'">Carbs</button>
+       <button (click) ="nutritionalFacts = 'protain'">protein</button>
+       <button (click) ="nutritionalFacts = 'fat'">fat</button>
+    </div>
+    <div [ngSwitch]="nutritionalFacts">
+            <p *ngSwitchCase ="'protain'">{{foodItem.facts.protein}} of protein </p>
+            <p *ngSwitchCase ="'fat'">{{foodItem.facts.fat}} of fat </p>
+            <p *ngSwitchCase ="'carbs'">{{foodItem.facts.carbs}} of carbs </p>
+            <p *ngSwitchDefault >{{foodItem.name}} as Default</p>
+   </div>
+</div>
+
+</div>

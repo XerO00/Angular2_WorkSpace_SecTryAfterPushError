@@ -1,0 +1,40 @@
+<html>
+ 
+<head>
+  <base href="/">
+  <meta charset="utf-8">
+  <title>First App</title> 
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles.css">   
+  <link rel="stylesheet" href="forms.css">   
+  <link rel="stylesheet" href="https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css">   
+
+  <script src="node_modules/core-js/client/shim.min.js"></script>
+  <script src="node_modules/zone.js/dist/zone.js"></script>
+  <script src="node_modules/reflect-metadata/Reflect.js"></script>
+  <script src="node_modules/systemjs/dist/system.src.js"></script> 
+ 
+    <link rel="shortcut icon" href="">
+    
+    <script src="systemjs.config.js"></script>
+
+    <script>
+      System.import('app').catch( function(err){console.error(err);} ); 
+    </script>
+</head>
+ 
+<body>
+  <my-app>Loading First Angular Application ...</my-app>
+</body>
+ 
+</html>
+
+
+<!-- Latest compiled and minified CSS 
+   changing app to main.js not worked even  so   
+ <link rel="icon" type="image/x-icon" href="favicon.ico">
+    
+    <script src="node_modules/core-js/client/shim.min.js"></script>
+
+    <script src="node_modules/core-js/client/shim.min.js"></script>
+-->

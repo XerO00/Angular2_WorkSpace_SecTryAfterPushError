@@ -1,0 +1,14 @@
+<div style="background-color: green; margin:20px;" >
+
+    <p> This is carList.component.html</p>
+     
+    <ul>
+        <li *ngFor="let car of carList"  >
+            <p> CarName : {{car.make}}</p>
+            <button (click)="onClick(car)" >LearnMore</button>
+        </li>
+    </ul>
+
+    <router-outlet></router-outlet>
+ 
+ </div>

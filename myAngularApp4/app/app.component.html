@@ -1,0 +1,98 @@
+<h1>Welcome to app.component.html</h1>
+  
+<!-- <food-list></food-list>
+<food-item *ngFor="let food of foodSourceArray" [foodItem]="food"></food-item>
+
+<food-item [foodItem]="foodItems.apple"  (likeChanged)="likeChanged($event)"></food-item>
+
+<food-item [foodItem]="foodItems.banana"  (likeChanged)="likeChanged($event)"></food-item>
+
+<home-form></home-form>
+<test-component></test-component>
+<h1> Safe Nav Example</h1>
+<p>First Food : {{foodSourceArray[0].name}}</p>
+<p>First Food : {{foodSourceArray[0].name}}</p>-->
+
+<!-- below is use for ngFor
+<nav>
+
+    <a routerLink="/foods" routerLinkActive="active" >See All Foods</a>
+    <a routerLink="/car-center" routerLinkActive="active" >CarCenter</a>
+    <a routerLink="/home" routerLinkActive="active" >Home</a>
+  
+</nav>
+
+
+<router-outlet></router-outlet>-->
+<!--
+<h1>Welcome to our app.component.html</h1>
+
+<button (click)="reloadFoods()">Reload</button>
+<ul>
+    <li *ngFor="let food of foodSourceArray; let i=index; trackBy:food?.name;"  >
+        <p> FoodNumber :{{i+1}} {{food.name}}</p>
+    </li>
+</ul>
+-->
+<!-- Below is the example for using directives
+<h1>Welcome to our app.component.html</h1>
+<p>Without the Directive</p>
+
+<p myMatrixGreenText >With Directive</p>  -->
+
+<!-- Below is for using built in pipes 
+<input [(ngModel)] ="favFood" />
+<p>Always Uppear case {{favFood | uppercase}}</p>
+<p>Always Lower case {{favFood | lowercase}}</p>
+
+-->
+
+<!-- Below is exapmle for using json pipes
+<h1>Json Pipe</h1>
+<p>First Food Without Json: {{foodSourceArray[0] }}</p>
+
+<p>First Food : {{foodSourceArray[0] | json}}</p>
+-->
+
+<!-- Below is exapmle for using currency pipes 
+
+<h1>Currency Pipe</h1>
+<input [(ngModel)] ="foodPrice"/>
+<p>Without The currency pipe {{foodPrice}}</p>
+<p>Default currency: {{foodPrice | currency}}</p>
+<p>Custom currency: {{foodPrice | currency: 'CAD' : true}}</p> -->
+
+<!-- Exapmle for slice 
+<p>Genral Array</p>
+<ul>
+    <li *ngFor="let food of foodSourceArray">
+        <p> Food :{{food.name}}</p>
+    </li>
+</ul>
+<p>Sliced Array</p>
+<ul>
+    <li *ngFor="let food of foodSourceArray | slice: 1:2">
+        <p> Food :{{food.name}}</p>
+    </li>
+</ul>  -->
+<!-- Example of date pipe
+
+<h1>Example of date pipe</h1>
+
+<p>Demo Date object {{myDateObject | json}}</p>
+<p>Default Pipe date: {{myDateObject | date}} </p> -->
+
+
+<!-- Example of custom pipe
+
+<h1>Example of Custom pipe</h1>
+  <input [(ngModel)] ="stringToStrip" />
+ <p>Custom Stripped String : {{stringToStrip | stripVowel}}</p> -->
+
+ 
+<!--
+<h2>Calling in Food Form</h2>
+
+<food-form></food-form> 
+<md-food-form></md-food-form>
+-->

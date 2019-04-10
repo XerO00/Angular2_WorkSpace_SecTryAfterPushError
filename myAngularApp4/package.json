@@ -1,0 +1,84 @@
+{
+  "name": "angular-firstapp",
+  "version": "1.0.0",
+  "description": "The TypeScript Definition Manager",
+  "main": "dist/bin.js",
+  "bin": {
+    "typings": "dist/bin.js"
+  },
+  "files": [
+    "dist/",
+    "typings.json"
+  ],
+  "scripts": {
+    "start": "concurrently \"npm run tsc:w\" \"npm run lite\" ",
+    "lite": "lite-server",
+    "postinstall": "typings install",
+    "tsc": "./node_modules/typescript/bin/tsc",
+    "tsc:w": "tsc-w",
+    "typings": "typings"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/typings/typings.git"
+  },
+  "keywords": [
+    "typings",
+    "typescript",
+    "definition",
+    "declaration",
+    "package",
+    "manager",
+    "typed"
+  ],
+  "author": {
+    "name": "Blake Embrey",
+    "email": "hello@blakeembrey.com",
+    "url": "http://blakeembrey.me"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/typings/typings/issues"
+  },
+  "homepage": "https://github.com/typings/typings",
+  "dependencies": {
+    "@angular/common": "^5.2.9",
+    "@angular/compiler": "^5.2.9",
+    "@angular/core": "^5.2.9",
+    "@angular/forms": "^5.2.9",
+    "@angular/http": "^5.2.9",
+    "@angular/platform-browser": "^5.2.9",
+    "@angular/platform-browser-dynamic": "^5.2.9",
+    "@angular/router": "^5.2.9",
+    "@angular/upgrade": "^5.2.9",
+    "angular": "^1.6.9",
+    "angular-core": "^0.0.5",
+    "angular-in-memory-web-api": "^0.5.4",
+    "angular2": "^2.0.0-beta.21",
+    "bootstrap": "^4.0.0",
+    "concurrently": "^3.5.1",
+    "core-js": "^2.5.3",
+    "es6-promise": "^4.2.4",
+    "es6-shim": "^0.35.3",
+    "install": "^0.10.4",
+    "lite-server": "^2.3.0",
+    "npm": "^5.7.1",
+    "reflect-metadata": "^0.1.12",
+    "rxjs": "^5.0.0-beta.6",
+    "sudo": "^1.0.3",
+    "systemjs": "^0.21.0",
+    "systemjs-plugin-babel": "0.0.25",
+    "typings": "^2.1.1",
+    "zone.js": "^0.8.20"
+  },
+  "devDependencies": {
+    "@angular/compiler": "^5.2.9",
+    "dependency-check": "^3.1.0",
+    "nock": "^9.2.3",
+    "rimraf": "^2.6.2",
+    "ts-node": "^5.0.1",
+    "tslint": "^5.9.1",
+    "tslint-config-standard": "^7.0.0",
+    "typescript": "^2.8.0-rc"
+  }
+}

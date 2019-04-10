@@ -1,0 +1,55 @@
+<!-- #region Below is example for module driven form -->
+
+<form [formGroup]="fdForm" novalidate (ngSubmit)="save(fdForm.value, fdForm.valid)" >
+     
+    <div>
+        <label>Name</label>
+        <input  type="text" formControlName="name"/>
+        <div [hidden]="fdForm.controls.name.valid || (fdForm.controls.name.pristine && !submitted)">A Name is Required</div>
+    </div>
+
+
+    <div>
+        <label>Description</label>
+        <input  type="text" formControlName="desctripition"/>
+        <div [hidden]="fdForm.controls.desctripition.valid || (fdForm.controls.desctripition.pristine && !submitted)">A Description is Required</div>
+    </div>
+
+    <div formGroupName="nutritionalInfo" >
+        <label>Serving Size</label>
+        <input  type="text" formControlName="servingSize"/>
+    </div>
+
+    <div formGroupName="nutritionalInfo" >
+        <label>Unit</label>
+        <input  type="text" formControlName="unit"/>
+    </div>
+
+    <div formGroupName="nutritionalInfo" >
+        <label>Calories</label>
+        <input  type="text" formControlName="calories"/>
+    </div>
+
+    <div formGroupName="nutritionalInfo" >
+        <label>Fats</label>
+        <input  type="text" formControlName="fat"/>
+    </div>
+
+    <div formGroupName="nutritionalInfo" >
+        <label>Protein</label>
+        <input  type="text" formControlName="protein"/>
+    </div>
+
+    <div formGroupName="nutritionalInfo" >
+        <label>Carbs</label>
+        <input  type="text" formControlName="carbs"/>
+    </div>
+    
+    <button type="submit">Submit</button>
+
+    <button (click)="demoDelayedFormSet()" type="submit">Set Form</button>
+  
+    <button (click)="demoDelayedNameFieldSet()" type="submit">Set Name</button>
+  
+    
+</form>

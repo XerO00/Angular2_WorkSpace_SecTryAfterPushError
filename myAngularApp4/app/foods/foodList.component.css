@@ -1,0 +1,22 @@
+
+
+.h1{
+    color: blue ;
+  }
+  p{
+    color:rgb(27, 207, 27)
+  }
+  .liked
+  {
+    background-color:rgb(221, 160, 221); 
+  }
+  .featured
+  {
+    background-color:rgb(231, 146, 146);
+  }
+  .italic{
+    font-style: italic;
+  }
+  .caps{
+    font-variant:small-caps; 
+  }

@@ -1,0 +1,27 @@
+[
+    {
+        "id":1,
+      "name": "apple",
+      "group": "fruit",
+      "description":"red and crunchy",
+       "servingSize":"1 Small apple",
+       "unit":"g",
+       "calories":"",
+       "fat":0,
+       "protein:0,
+       "carbs":0
+    },
+
+    {
+        "id":2,
+      "name": "banana",
+      "group": "fruit",
+      "description":"yellow and soft",
+       "servingSize":"1 Small banana",
+       "unit":"g",
+       "calories":"",
+       "fat":0,
+       "protein:0,
+       "carbs":0
+    }
+ ]

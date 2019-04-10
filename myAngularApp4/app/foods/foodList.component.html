@@ -1,0 +1,9 @@
+<div> <h1>Food List Page foodList.component.html</h1>
+   <ul>
+        <li *ngFor="let food of fdList"  >
+            <p> Food Name: {{food.name}}</p>
+            <p *ngIf="food.description"> Description: {{food.description}}</p>
+            <button (click)="onItemClicked(food)" >more</button>
+        </li>
+    </ul>
+</div>
